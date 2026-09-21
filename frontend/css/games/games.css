@@ -1,0 +1,254 @@
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+section {
+    min-width: 0;
+}
+
+article {
+    min-width: 0;
+}
+
+.games-heading>div {
+    min-width: 0;
+}
+
+.games-description,
+.games-heading h1 {
+    overflow-wrap: anywhere;
+}
+
+.games-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 32px 34px 18px;
+}
+
+.eyebrow {
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    margin: 0 0 8px;
+    text-transform: uppercase;
+}
+
+.games-heading h1,
+.pokemon-details h2,
+.stats-list h3 {
+    margin: 0;
+}
+
+.games-heading h1 {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+.games-description {
+    color: var(--muted);
+    margin: 10px 0 0;
+}
+
+.api-status,
+.type-badge {
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--muted);
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 7px 11px;
+    white-space: nowrap;
+}
+
+.api-status.is-connected {
+    border-color: rgba(74, 222, 128, 0.45);
+    color: #86efac;
+}
+
+.pokemon-panel {
+    display: grid;
+    grid-template-columns: minmax(190px, 0.8fr) 1.4fr;
+    gap: 34px;
+    min-width: 0;
+    padding: 18px 34px 36px;
+}
+
+.pokemon-visual {
+    align-items: center;
+    background: radial-gradient(circle, rgba(125, 211, 252, 0.2), transparent 68%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 300px;
+    position: relative;
+}
+
+.pokemon-visual img {
+    max-height: 260px;
+    object-fit: contain;
+    width: 100%;
+}
+
+.pokemon-number {
+    color: var(--muted);
+    font-weight: 700;
+}
+
+.pokemon-details {
+    min-width: 0;
+}
+
+.pokemon-title {
+    align-items: center;
+    display: flex;
+    gap: 18px;
+    justify-content: space-between;
+}
+
+.pokemon-details h2 {
+    font-size: 2.1rem;
+}
+
+.type-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.type-badge {
+    background: rgba(125, 211, 252, 0.12);
+    color: var(--accent);
+}
+
+.pokemon-info {
+    border-bottom: 1px solid var(--line);
+    border-top: 1px solid var(--line);
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 26px 0;
+    padding: 18px 0;
+}
+
+.pokemon-info div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.pokemon-info span,
+.stat-row span {
+    color: var(--muted);
+    font-size: 0.78rem;
+}
+
+.pokemon-info strong {
+    font-size: 0.95rem;
+    overflow-wrap: anywhere;
+}
+
+.stats-list h3 {
+    font-size: 1rem;
+    margin-bottom: 14px;
+}
+
+.stats-list {
+    min-width: 0;
+}
+
+.stat-row {
+    align-items: center;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: minmax(65px, 82px) 28px minmax(0, 1fr);
+    margin: 10px 0;
+}
+
+.stat-row>span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.stat-bar {
+    background: rgba(159, 182, 211, 0.16);
+    border-radius: 999px;
+    height: 7px;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.stat-bar span {
+    background: linear-gradient(90deg, var(--accent-strong), #a7f3d0);
+    border-radius: inherit;
+    display: block;
+    height: 100%;
+}
+
+.loading-message,
+.error-message {
+    color: var(--muted);
+    grid-column: 1 / -1;
+    padding: 42px 0;
+    text-align: center;
+}
+
+.error-message {
+    color: #fca5a5;
+}
+
+@media (max-width: 768px) {
+
+    .games-heading,
+    .pokemon-panel {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .games-heading,
+    .pokemon-title {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .pokemon-panel {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .pokemon-visual {
+        min-height: 220px;
+    }
+
+    .pokemon-visual img {
+        max-height: 200px;
+    }
+
+    .pokemon-info {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .games-heading,
+    .pokemon-panel {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .pokemon-info {
+        grid-template-columns: 1fr;
+    }
+
+    .pokemon-details h2 {
+        font-size: 1.7rem;
+    }
+
+    .pokemon-visual {
+        min-height: 180px;
+    }
+}
