@@ -1,33 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu de Login</title>
+    <title>Sistema Web | Início</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
-        <a href="pages/user/login/login.html">Login</a>
-        <a href="pages/user/register/register.html">Cadastrar</a>
-        <a href="pages/user/profile/profile.html">Perfil</a>
+        <a class="brand" href="index.html">Sistema Web</a>
+        <details class="header-menu">
+            <summary>Menu</summary>
+            <div class="menu-links">
+                <a href="pages/games/games.html">Games</a>
+                <a href="pages/user/login/login.html">Login</a>
+                <a href="pages/user/register/register.html">Cadastrar</a>
+                <a href="pages/user/profile/profile.html">Perfil</a>
+            </div>
+        </details>
     </header>
 
-    <section>
-        <nav>
-            <ul>
-                <li><a href="pages/games/games.html">Games</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Novidades</a></li>
-            </ul>
-        </nav>
+    <main class="home-main">
+        <section class="home-hero">
+            <div class="hero-content">
+                <p class="eyebrow">Seu espaço digital</p>
+                <h1>Explore, jogue e acompanhe tudo em um só lugar.</h1>
+                <p class="hero-description">Descubra informações de Pokémon, acompanhe novidades e organize sua
+                    experiência com uma conta personalizada.</p>
+                <div class="hero-actions">
+                    <a class="primary-action" href="pages/games/games.html">Explorar games</a>
+                    <a class="secondary-action" href="pages/user/register/register.html">Criar conta</a>
+                </div>
+            </div>
+        </section>
 
-        <article>
-            <img src="assets/img/background.jpg" alt="background">
-        </article>
-    </section>
+        <section class="home-features" aria-labelledby="features-title">
+            <div class="section-heading">
+                <p class="eyebrow">Comece agora</p>
+                <h2 id="features-title">O que você quer fazer?</h2>
+            </div>
+            <div class="feature-grid">
+                <a class="feature-card" href="pages/games/games.html">
+                    <span class="feature-number">01</span>
+                    <h3>Explorar games</h3>
+                    <p>Consulte o Pokémon em destaque e veja dados carregados em tempo real.</p>
+                    <span class="feature-link">Abrir Pokédex &rarr;</span>
+                </a>
+                <a class="feature-card" href="pages/user/profile/profile.html">
+                    <span class="feature-number">02</span>
+                    <h3>Acessar perfil</h3>
+                    <p>Confira seus dados e deixe sua experiência mais personalizada.</p>
+                    <span class="feature-link">Ver perfil &rarr;</span>
+                </a>
+                <a class="feature-card" href="pages/user/login/login.html">
+                    <span class="feature-number">03</span>
+                    <h3>Entrar na conta</h3>
+                    <p>Faça login para continuar de onde parou e acessar seus recursos.</p>
+                    <span class="feature-link">Fazer login &rarr;</span>
+                </a>
+            </div>
+        </section>
+    </main>
     <footer>
         <p>&copy;Sistema Web.</p>
     </footer>
