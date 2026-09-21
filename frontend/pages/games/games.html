@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games | Pokédex</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <header>
+        <a href="../../pages/user/login/login.html">Login</a>
+        <a href="../../pages/user/register/register.html">Cadastrar</a>
+        <a href="../../pages/user/profile/profile.html">Perfil</a>
+    </header>
+
+    <section>
+        <article>
+            <div class="games-heading">
+                <div>
+                    <p class="eyebrow">Pokédex</p>
+                    <h1>Conheça o Pokémon do dia</h1>
+                    <p class="games-description">Dados carregados em tempo real pela PokéAPI.</p>
+                </div>
+                <span class="api-status" id="api-status">Carregando...</span>
+            </div>
+
+            <div class="pokemon-panel" id="pokemon-panel" aria-live="polite">
+                <p class="loading-message">Buscando dados do Ditto...</p>
+            </div>
+        </article>
+    </section>
+    <footer>
+        <p>&copy;Sistema Web.</p>
+    </footer>
+    <script src="../../js/games.js"></script>
+</body>
+
+</html>
